@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="750.0" prefWidth="500.0" spacing="10" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+	
+	<Label fx:id="topicLabel" style="-fx-font-family: Alef; -fx-font-size: 24; -fx-font-weight: bold;" text="Tracker" translateY="-100.0">Topic</Label>
+   <Label fx:id="doLabel" alignment="CENTER" style="-fx-font-weight: bold; -fx-font-family: alef;" text="Please enter your Work-Topic...." translateY="-50.0" />
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" translateY="-50.0">
+      <children>
+         	<Button fx:id="startBtn" onAction="#startTracker" style="-fx-font-weight: bold; -fx-background-color: #3b5; -fx-text-fill: white; -fx-font-family: alef;" text="Submit">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </Button>
+         <TextField fx:id="textField" alignment="TOP_RIGHT" style="-fx-background-color: #fff; -fx-font-family: alef; -fx-border-width: 0.8; -fx-border-color: #3b5;" text="Programming">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </TextField>
+      </children>
+   </HBox>
+	<Label style="-fx-font-family: alef; -fx-font-weight: bold;" text="Getting paid since...">Getting paid since.. </Label><Label fx:id="timeLabel" style="-fx-font-size: 20; -fx-font-family: alef;">Time</Label>
+	<ProgressIndicator fx:id="progressInd" minHeight="200.0" minWidth="200.0" progress="0.0" style="-fx-progress-color: #3b5;" translateY="25.0" />
+	<Label fx:id="earnLabel" style="-fx-font-size: 20; -fx-text-fill: #3b5; -fx-font-family: alef;" text="€€€" translateY="30.0" />
+	<Button fx:id="toggleBtn" onAction="#toggleTracker" style="-fx-font-weight: bold; -fx-background-color: #3b5; -fx-text-fill: white; -fx-font-family: alef;" text="Stop" translateY="50.0" />
+</VBox>
